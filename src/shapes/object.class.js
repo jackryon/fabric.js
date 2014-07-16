@@ -1457,7 +1457,53 @@
       if (this.fillRule && this._prevFillRule) {
         ctx.globalCompositeOperation = this._prevFillRule;
       }
+    },
+
+
+
+
+
+
+    /**
+    * Custom Pictoura Functions
+    */
+
+    fabric.Object.prototype.alignTop = function(padding){
+      padding = padding || 0;
+      this.set({
+        top: 0 + padding
+      });
+    },
+
+
+    fabric.Object.prototype.alignBottom = function(padding){
+      padding = padding || 0;
+      this.set({
+        top: this.canvas.height - (this.height * this.scaleY) - padding
+      });
+    },
+
+
+    fabric.Object.prototype.alignLeft = function(padding){
+      padding = padding || 0;
+      this.set({
+        left: 0 + padding
+      });
+    },
+
+
+    fabric.Object.prototype.alignRight = function(padding){
+      padding = padding || 0;
+      this.set({
+        left: this.canvas.width - (this.width * this.scaleX) - padding
+      });
     }
+
+
+
+
+
+
   });
 
   fabric.util.createAccessors(fabric.Object);
@@ -1479,7 +1525,7 @@
    * @constant
    * @type Number
    */
-  fabric.Object.NUM_FRACTION_DIGITS = 2;
+  fabric.Object.NUM_FRACTION_DIGITS = 10;
 
   /**
    * Unique id used internally when creating SVG elements
@@ -1488,5 +1534,8 @@
    * @type Number
    */
   fabric.Object.__uid = 0;
+
+
+
 
 })(typeof exports !== 'undefined' ? exports : this);

@@ -5,7 +5,6 @@
       radiansToDegrees = fabric.util.radiansToDegrees,
       atan2 = Math.atan2,
       abs = Math.abs,
-
       STROKE_OFFSET = 0.5;
 
   /**

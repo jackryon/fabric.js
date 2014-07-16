@@ -217,6 +217,7 @@ var filesToInclude = [
   'src/shapes/path_group.class.js',
   'src/shapes/group.class.js',
   'src/shapes/image.class.js',
+  "src/shapes/page_number_text.class.js",
 
   ifSpecifiedInclude('object_straightening', 'src/mixins/object_straightening.mixin.js'),
 
