@@ -1,11 +1,12 @@
 (function() {
 
+
   var clone = fabric.util.object.clone;
 
 
   // create PageNumberText class from Text class
   fabric.PageNumberText = fabric.util.createClass(fabric.IText, {
-    type: "page-number-text",
+    type: "page-number-text"
   });
 
 
