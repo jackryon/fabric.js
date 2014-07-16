@@ -217,7 +217,6 @@ var filesToInclude = [
   'src/shapes/path_group.class.js',
   'src/shapes/group.class.js',
   'src/shapes/image.class.js',
-  "src/shapes/page_number_text.class.js",
 
   ifSpecifiedInclude('object_straightening', 'src/mixins/object_straightening.mixin.js'),
 
@@ -244,6 +243,8 @@ var filesToInclude = [
   ifSpecifiedInclude('itext', 'src/mixins/itext_click_behavior.mixin.js'),
   ifSpecifiedInclude('itext', 'src/mixins/itext_key_behavior.mixin.js'),
   ifSpecifiedInclude('itext', 'src/mixins/itext.svg_export.js'),
+
+  "src/shapes/page_number_text.class.js",
 
   ifSpecifiedInclude('node', 'src/node.js'),
 
