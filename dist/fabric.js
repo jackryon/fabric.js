@@ -15129,7 +15129,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
     * Custom Pictoura Functions
     */
 
-    fabric.Object.prototype.alignTop = function(padding){
+    alignTop: function(padding){
       padding = padding || 0;
       this.set({
         top: 0 + padding
@@ -15137,7 +15137,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
     },
 
 
-    fabric.Object.prototype.alignBottom = function(padding){
+    alignBottom: function(padding){
       padding = padding || 0;
       this.set({
         top: this.canvas.height - (this.height * this.scaleY) - padding
@@ -15145,7 +15145,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
     },
 
 
-    fabric.Object.prototype.alignLeft = function(padding){
+    alignLeft: function(padding){
       padding = padding || 0;
       this.set({
         left: 0 + padding
@@ -15153,7 +15153,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
     },
 
 
-    fabric.Object.prototype.alignRight = function(padding){
+    alignRight: function(padding){
       padding = padding || 0;
       this.set({
         left: this.canvas.width - (this.width * this.scaleX) - padding
