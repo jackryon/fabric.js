@@ -15133,7 +15133,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
       if (this.fillRule && this._prevFillRule) {
         ctx.globalCompositeOperation = this._prevFillRule;
       }
-    }
+    },
 
 
 

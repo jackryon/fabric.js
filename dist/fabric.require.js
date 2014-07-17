@@ -15133,7 +15133,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
       if (this.fillRule && this._prevFillRule) {
         ctx.globalCompositeOperation = this._prevFillRule;
       }
-    }
+    },
 
 
 
@@ -25784,6 +25784,26 @@ fabric.util.object.extend(fabric.IText.prototype, /** @lends fabric.IText.protot
   }
 });
 /* _TO_SVG_END_ */
+
+
+(function() {
+
+
+  var clone = fabric.util.object.clone;
+
+
+  // create PageNumberText class from Text class
+  fabric.PageNumberText = fabric.util.createClass(fabric.IText, {
+    type: "page-number-text"
+  });
+
+
+  fabric.PageNumberText.fromObject = function(object) {
+    return new fabric.PageNumberText(object.text, clone(object));
+  };
+
+
+})();
 
 
 (function() {

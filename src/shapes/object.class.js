@@ -1457,7 +1457,7 @@
       if (this.fillRule && this._prevFillRule) {
         ctx.globalCompositeOperation = this._prevFillRule;
       }
-    }
+    },
 
 
 
