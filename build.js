@@ -244,6 +244,9 @@ var filesToInclude = [
   ifSpecifiedInclude('itext', 'src/mixins/itext_key_behavior.mixin.js'),
   ifSpecifiedInclude('itext', 'src/mixins/itext.svg_export.js'),
 
+  // build my custom page number class in, after the itext it's based on..
+  "src/shapes/page_number_text.class.js",
+
   ifSpecifiedInclude('node', 'src/node.js'),
 
   ifSpecifiedAMDInclude(amdLib)
