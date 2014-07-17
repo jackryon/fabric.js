@@ -1458,6 +1458,55 @@
         ctx.globalCompositeOperation = this._prevFillRule;
       }
     }
+
+
+
+
+
+
+    /**
+    * Custom Pictoura Functions
+    */
+
+    alignTop: function(padding){
+      padding = padding || 0;
+      this.set({
+        top: 0 + padding
+      });
+    },
+
+
+    alignBottom: function(padding){
+      padding = padding || 0;
+      this.set({
+        top: this.canvas.height - (this.height * this.scaleY) - padding
+      });
+    },
+
+
+    alignLeft: function(padding){
+      padding = padding || 0;
+      this.set({
+        left: 0 + padding
+      });
+    },
+
+
+    alignRight: function(padding){
+      padding = padding || 0;
+      this.set({
+        left: this.canvas.width - (this.width * this.scaleX) - padding
+      });
+    }
+
+
+
+
+
+
+
+
+
   });
 
   fabric.util.createAccessors(fabric.Object);
