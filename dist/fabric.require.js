@@ -1,4 +1,4 @@
-/* build: `node build.js modules=ALL exclude=gestures minifier=uglifyjs` */
+/* build: `node build.js modules=ALL exclude=gestures requirejs minifier=uglifyjs` */
 /*! Fabric.js Copyright 2008-2014, Printio (Juriy Zaytsev, Maxim Chernyak) */
 
 var fabric = fabric || { version: "1.4.7" };

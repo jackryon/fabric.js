@@ -1,4 +1,4 @@
-/* build: `node build.js modules=ALL exclude=gestures minifier=uglifyjs` */
+/* build: `node build.js modules=ALL exclude=gestures requirejs minifier=uglifyjs` */
 /*! Fabric.js Copyright 2008-2014, Printio (Juriy Zaytsev, Maxim Chernyak) */
 
 var fabric = fabric || { version: "1.4.7" };
@@ -23837,4 +23837,17 @@ fabric.util.object.extend(fabric.IText.prototype, /** @lends fabric.IText.protot
   }
 
 })();
+
+
+/* Footer for requirejs AMD support */
+
+window.fabric = fabric;
+
+// make sure exports.fabric is always defined when used as 'global' later scopes
+var exports = exports || {};
+exports.fabric = fabric;
+
+if (typeof define === 'function' && define.amd) {
+  define([], function() { return fabric });
+}
 
