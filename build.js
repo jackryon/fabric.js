@@ -177,7 +177,6 @@ var filesToInclude = [
   ifSpecifiedInclude('shadow', 'src/shadow.class.js'),
 
   'src/static_canvas.class.js',
-  "src/workbench_page_canvas.class.js",
 
   ifSpecifiedInclude('freedrawing', 'src/brushes/base_brush.class.js'),
 
@@ -189,6 +188,8 @@ var filesToInclude = [
   ifSpecifiedInclude('interaction', 'src/canvas.class.js'),
   ifSpecifiedInclude('interaction', 'src/mixins/canvas_events.mixin.js'),
   ifSpecifiedInclude('interaction', 'src/mixins/canvas_grouping.mixin.js'),
+
+  "src/workbench_page_canvas.class.js",
 
   'src/mixins/canvas_dataurl_exporter.mixin.js',
 
