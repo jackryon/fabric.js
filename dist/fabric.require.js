@@ -12950,7 +12950,7 @@ fabric.PatternBrush = fabric.util.createClass(fabric.PencilBrush, /** @lends fab
     initialize: function(el, options){
       options || (options = {});
       this.callSuper("initialize", el, options);
-      this.on("after:render", this.onAfterRender);
+      this.on("before:render", this.onBeforeRender);
     },
 
 
@@ -12971,7 +12971,7 @@ fabric.PatternBrush = fabric.util.createClass(fabric.PencilBrush, /** @lends fab
     },
 
 
-    onAfterRender: function(evt){
+    onBeforeRender: function(evt){
       this.setBleedRegions();
     },
 

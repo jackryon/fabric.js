@@ -15,7 +15,7 @@
     initialize: function(el, options){
       options || (options = {});
       this.callSuper("initialize", el, options);
-      this.on("after:render", this.onAfterRender);
+      this.on("before:render", this.onBeforeRender);
     },
 
 
@@ -36,7 +36,7 @@
     },
 
 
-    onAfterRender: function(evt){
+    onBeforeRender: function(evt){
       this.setBleedRegions();
     },
 
