@@ -3,17 +3,13 @@
 
   'use strict';
 
-  if(fabric.StaticCanvas){
+  if(fabric.WorkbenchPageCanvas){
     fabric.warn('fabric.WorkbenchPageCanvas is already defined.');
     return;
   }
 
 
   fabric.WorkbenchPageCanvas = fabric.util.createClass(fabric.Canvas, {
-
-
-    resizeHandler: undefined,
-    resizeEventEmitter: undefined,
 
 
     initialize: function(el, options){
@@ -30,6 +26,7 @@
 
     setBleedRegions: function(){
       if(this.width === 300 && this.height === 150) return false;
+      console.warn("pass overlay image path into the initializer for this class");
       this.setOverlayImage("/assets/book_builder/bookbuilder-bleed-regions.png", this.renderAll.bind(this), {
         width: this.width,
         height: this.height,
