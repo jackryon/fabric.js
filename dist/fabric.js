@@ -12950,8 +12950,8 @@ fabric.PatternBrush = fabric.util.createClass(fabric.PencilBrush, /** @lends fab
     initialize: function(el, options){
       options || (options = {});
       this.callSuper("initialize", el, options);
-      //this.on("before:render", this.onBeforeRender);
-      this.on("after:render", this.onAfterRender);
+      this.on("before:render", this.onBeforeRender);
+      //this.on("after:render", this.onAfterRender);
     },
 
 
