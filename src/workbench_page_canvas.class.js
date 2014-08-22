@@ -15,7 +15,8 @@
     initialize: function(el, options){
       options || (options = {});
       this.callSuper("initialize", el, options);
-      this.on("before:render", this.onBeforeRender);
+      //this.on("before:render", this.onBeforeRender);
+      this.on("after:render", this.onAfterRender);
     },
 
 
@@ -27,7 +28,7 @@
     setBleedRegions: function(){
       if(this.width === 300 && this.height === 150) return false;
       console.warn("pass overlay image path into the initializer for this class");
-      this.setOverlayImage("/assets/book_builder/bookbuilder-bleed-regions.png", this.renderAll.bind(this), {
+      this.setOverlayImage("/assets/book_builder/bookbuilder-bleed-regions.png", null, /*this.renderAll.bind(this),*/ {
         width: this.width,
         height: this.height,
         originX: "left",
@@ -37,6 +38,11 @@
 
 
     onBeforeRender: function(evt){
+      this.setBleedRegions();
+    },
+
+
+    onAfterRender: function(evt){
       this.setBleedRegions();
     },
 
