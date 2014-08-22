@@ -12936,7 +12936,7 @@ fabric.PatternBrush = fabric.util.createClass(fabric.PencilBrush, /** @lends fab
 (function(){
 
 
-  'use strict';
+ 'use strict';
 
   if(fabric.WorkbenchPageCanvas){
     fabric.warn('fabric.WorkbenchPageCanvas is already defined.');
@@ -12950,8 +12950,6 @@ fabric.PatternBrush = fabric.util.createClass(fabric.PencilBrush, /** @lends fab
     initialize: function(el, options){
       options || (options = {});
       this.callSuper("initialize", el, options);
-      this.on("before:render", this.onBeforeRender);
-      //this.on("after:render", this.onAfterRender);
     },
 
 
@@ -12960,25 +12958,14 @@ fabric.PatternBrush = fabric.util.createClass(fabric.PencilBrush, /** @lends fab
     },
 
 
-    setBleedRegions: function(){
-      if(this.width === 300 && this.height === 150) return false;
-      console.warn("pass overlay image path into the initializer for this class");
-      this.setOverlayImage("/assets/book_builder/bookbuilder-bleed-regions.png", null, /*this.renderAll.bind(this),*/ {
-        width: this.width,
-        height: this.height,
+    setBleedRegions: function(w, h, imgPath){
+      if(!w || !h) return false;
+      this.setOverlayImage(imgPath, this.renderAll.bind(this), {
+        width: w,
+        height: h,
         originX: "left",
         originY: "top"
       });
-    },
-
-
-    onBeforeRender: function(evt){
-      this.setBleedRegions();
-    },
-
-
-    onAfterRender: function(evt){
-      this.setBleedRegions();
     },
 
 
